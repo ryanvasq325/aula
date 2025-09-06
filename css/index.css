@@ -14,3 +14,9 @@
     font-size: 13px;
 
 }
+
+.thead {
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    color: black;
+}
