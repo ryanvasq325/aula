@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Vendas</title>
+    <title>Contas a pagar e Receber</title>
 </head>
 <body>
     <a href="index.html">Voltar ao início</a>
     <br>
-    <h1>Registro de Vendas</h1>
+    <h1>Contas a pagar e Receber</h1>
     <br>
-    <label for="produtos">Produtos</label>
-    <select name="produtos" id="produtos">
-        <option value="1">Pera</option>
-        <option value="2">Macaxeira</option>
-        <option value="3">Coca-Cola</option>
-        <option value="4">Abacaxi</option>
-        <option value="5">Uva</option>
-    </select>
+    <label for="valor_inicial">Valor Inicial</label>
+    <input type="number" placeholder="Digite o Valor inicial..." id="valor_inicial">
+    <br>
+    <br>
+    <label for="valor_devido">Valor Devido</label>
+    <input type="number" placeholder="Digite o Valor devido..." id="valor_devido">
+    <br>
+    <br>
+    <label for="data_vencimento">Data de Vencimento</label>
+    <input type="date" id="data_vencimento">
     <br>
     <br>
     <label for="desconto">Desconto</label>
@@ -30,10 +32,5 @@
     <br>
     <label for="observacao">Observação</label>
     <input type="text" placeholder="Digite a Observação..." id="observacao">
-    <br>
-    <br>
-    <button type="submit" class="btn btn-success">Salvar</button>
-
-    
 </body>
 </html>
