@@ -1,0 +1,28 @@
+.bnt {
+    border: none;
+    color: crimson;
+    border-radius: 8px;
+    padding: 3%;
+    width: 9%;
+    box-shadow: 1px 2px 3px gray;
+    text-decoration: none;
+    text-align: center;
+}
+
+.table {
+    border: 3px solid black;
+    font-size: 13px;
+
+}
+
+.thead {
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    color: black;
+}
+
+.btn-success:hover {
+    background-color: red;
+    transition: 0.4s;
+    box-shadow: 1px 2px 3px;    
+}
