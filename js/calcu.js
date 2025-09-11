@@ -4,7 +4,7 @@ let operator = '';
 let secondNumber = '';
 
 function appendValue(value) {
-    if (value === '+' || value === '-' || value === '*' || value === '/') {
+    if (value === '+' || value === '-' || value === '×' || value === '÷' || value === '%') {
         if (firstNumber && !operator) {
             operator = value;
             display.value += value;
@@ -29,15 +29,24 @@ function clearDisplay() {
 function calculateResult() {
     let result;
     const num1 = parseFloat(firstNumber.replace(',', '.'));
-    const num2 = parseFloat(secondNumber.replace(',', '.'));
+    let num2 = parseFloat(secondNumber.replace(',', '.'));
 
-    if (operator === '+') {
+    if (isNaN(num1) || isNaN(num2)) {
+        display.value = 'Erro';
+        return;
+    }
+
+
+    if (operator === '%') {
+    
+        result = num1 * (num2 / 100);
+    } else if (operator === '+') {
         result = num1 + num2;
     } else if (operator === '-') {
         result = num1 - num2;
-    } else if (operator === '*') {
+    } else if (operator === '×') {
         result = num1 * num2;
-    } else if (operator === '/') {
+    } else if (operator === '÷') {
         if (num2 === 0) {
             display.value = 'Erro: Divisão por zero';
             return;
@@ -48,7 +57,10 @@ function calculateResult() {
         return;
     }
 
-    display.value = result.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 10 });
+    display.value = result.toLocaleString('pt-BR', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 10
+    });
 
     firstNumber = result.toString();
     operator = '';
