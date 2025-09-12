@@ -27,14 +27,13 @@ async function BuscarCep(){
 }
 const a = async () => {
     const cnpjValue = Cnpj.value;
-    console.log(cnpjValue)
-    console.log(typeof cnpjValue)
     const cnpjFormatedValue = cnpjValue
         .replace('.','')
         .replace('-','')
         .replace('/','')
         .trim();
 const url = `https://brasilapi.com.br/api/cnpj/v1/${cnpjFormatedValue}`;
+
 return;
 }
 
