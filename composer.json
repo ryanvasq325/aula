@@ -1,0 +1,16 @@
+{
+    "name": "root/nginx",
+    "description": "Primeiro projeto com orientação ao objeto",
+    "autoload": {
+        "psr-4": {
+            "app\\" : "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RYAN DE SOUZA VASQUES",
+            "email": "ryanvasques77@gmail.com"
+        }
+    ],
+    "require": {}
+}
