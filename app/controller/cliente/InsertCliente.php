@@ -1,7 +1,8 @@
 <?php
+
 namespace app\controller\cliente;
 
-class InsertCliente 
+class InsertCliente
 {
     public static function Insert(): bool
     {
